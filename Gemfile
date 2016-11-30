@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.18', '< 0.5'
+# user authentication with devise
+gem 'devise'
 # Gem to generate fake data
 gem 'faker', '~> 1.6', '>= 1.6.3'
 # Use bootstrap4 as FrontEnd Framework
