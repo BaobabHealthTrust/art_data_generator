@@ -7,6 +7,7 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 # user authentication with devise
 gem 'devise'
+#gem 'activeadmin', github: 'gregbell/active_admin'
 # Gem to generate fake data
 gem 'faker', '~> 1.6', '>= 1.6.3'
 # Use bootstrap4 as FrontEnd Framework
