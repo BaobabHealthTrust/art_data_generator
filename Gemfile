@@ -7,6 +7,8 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 # Gem to generate fake data
 gem 'faker', '~> 1.6', '>= 1.6.3'
+# Use bootstrap4 as FrontEnd Framework
+gem 'bootstrap', '~> 4.0.0.alpha5'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -48,3 +50,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# for use with bootstrap tooltip 'tether'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
