@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   get 'home/index'
   #get '/login' => 'users#sign_in'
@@ -7,6 +8,12 @@ Rails.application.routes.draw do
 	get '/login', to: 'devise/sessions#new', as: :login 
 	get '/logout', to: 'users#logout'
   end
+
+  get '/new_patients', to: 'generator#patients'
+
+  get '/create_patient', to: 'generator#create_patient'
+
+  get 'generator/test'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'home#index'

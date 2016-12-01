@@ -1,0 +1,59 @@
+<div class="container">
+	<h1>Generator#patients</h1>
+
+	<div class="row">
+		<div class="col-md-8">
+			<table class="">
+				<tr>
+					<th>Number of users</th>
+					<td><input type="number" id="number_of_users"></td>
+				</tr>
+				<tr>
+					<td col-span="2"><button class="btn btn-info" onclick="startCreating()">Create</button></td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<p>Progress...</p>
+			<span id="progress"></span>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var count = 1;
+	function createPatient(){
+		var progress = document.getElementById('progress');                                                                          
+	    if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+	        xmlhttp=new XMLHttpRequest();                                             
+	      }else{// code for IE6, IE5                                                  
+	        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");                           
+	      }                                                                           
+	      xmlhttp.onreadystatechange=function() { 
+	                                    
+	        if (xmlhttp.readyState==4 && xmlhttp.status==200) {                       
+	          var results = xmlhttp.responseText;                                    
+	          if(results == 'undefined' || results == '' || results == '"did not create"') {  
+	          	               
+	            return;                                                               
+	          }else{ 
+	          	                                      
+	            progress.innerHTML = count;
+				count = count + 1;                                                           
+	          }                                                                       
+	        }                                                                         
+	      }                                                                           
+	      xmlhttp.open("GET","/create_patient",true);           
+	      xmlhttp.send();
+	}
+	
+	function startCreating(){
+		count = 1;
+		var number_of_patients = parseInt(document.getElementById('number_of_users').value);
+		
+		while (number_of_patients > 0){
+			createPatient();
+			number_of_patients -= 1;
+		}
+	}
+</script>
