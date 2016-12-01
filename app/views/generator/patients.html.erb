@@ -21,9 +21,11 @@
 </div>
 
 <script type="text/javascript">
-	var count = 1;
+	var count = 1; records = 0 
+
 	function createPatient(){
-		var progress = document.getElementById('progress');                                                                          
+		var progress = document.getElementById('progress');
+
 	    if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
 	        xmlhttp=new XMLHttpRequest();                                             
 	      }else{// code for IE6, IE5                                                  
@@ -39,7 +41,10 @@
 	          }else{ 
 	          	                                      
 	            progress.innerHTML = count;
-				count = count + 1;                                                           
+	            if(count < records) {
+	            	count++;
+	            	createPatient();
+	            }
 	          }                                                                       
 	        }                                                                         
 	      }                                                                           
@@ -50,10 +55,12 @@
 	function startCreating(){
 		count = 1;
 		var number_of_patients = parseInt(document.getElementById('number_of_users').value);
-		
+		/*
 		while (number_of_patients > 0){
 			createPatient();
 			number_of_patients -= 1;
-		}
+		} */
+		records = number_of_patients;
+		createPatient();
 	}
 </script>
