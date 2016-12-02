@@ -11,9 +11,11 @@ Rails.application.routes.draw do
 
   get '/new_patients', to: 'generator#patients'
 
-  get '/create_patient', to: 'generator#create_patient'
+  get '/create_patient/:gender/:dob', to: 'generator#create_patient'
 
   get 'generator/test'
+
+  get '/new_visits', to: 'generator#visits'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'home#index'
