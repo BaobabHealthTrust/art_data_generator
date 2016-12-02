@@ -18,3 +18,4 @@
 
 # ignore database configurations
 config/database.yml
+/*.lock
