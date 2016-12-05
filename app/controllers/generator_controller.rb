@@ -50,7 +50,7 @@ class GeneratorController < ApplicationController
   end
 	
   def list_of_patients_without_any_encounters
-    uri = "http://admini:test@192.168.18.253:3000/data_generator/list_of_patients_without_any_encounters"
+    uri = "http://192.168.18.253:3000/data_generator/patients_without_any_encs"
     patients = JSON.parse(RestClient.post(uri,params))
     
     render text: patients.to_json and return
