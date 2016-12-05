@@ -1,1 +1,43 @@
-Visits
+
+<%= stylesheet_link_tag 'bootstrap/jquery.dataTables.min'%>
+<%= javascript_include_tag 'bootstrap/jquery.dataTables.min' %>
+
+
+<table id="myTable">
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Given name</th>
+  <th>Family name</th>
+  <th>Gender</th>
+  <th>DOB</th>
+</tr>
+</thead>
+<tbody>
+<%(@patients || []).each do |patient|%>
+ <tr>
+  <td><%=%></td>
+  <td><%=patient['']%></td>
+  <td></td>
+  <td></td>
+  <td></td>
+ </tr>
+<%end%>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+      $('#myTable').DataTable();
+});
+
+</script>
