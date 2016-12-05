@@ -47,7 +47,7 @@ class GeneratorController < ApplicationController
   def visits
     #uri = "http://admini:test@192.168.18.253:3000/GenericPatientsController/search_all"
     #person = JSON.parse(RestClient.post(uri)).to_json 
-    uri = "http://localhost:3000/data_generator/patients_without_any_encs"
+    uri = "http://192.168.18.253:3000/data_generator/patients_without_any_encs"
     @patients = JSON.parse(RestClient.post(uri,params))
   end
 	

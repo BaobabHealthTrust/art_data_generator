@@ -2,6 +2,32 @@
 <%= stylesheet_link_tag 'bootstrap/jquery.dataTables.min'%>
 <%= javascript_include_tag 'bootstrap/jquery.dataTables.min' %>
 
+<style>
+#controls {
+ text-align: right;
+}
+
+</style>
+
+<div id='controls' class='row'>
+
+<div class='col-md-4'>
+ <input class='btn btn-info' type="button" value="Generate transfer ins" />
+</div>
+
+<div class='col-md-4'>
+ <input class='btn btn-info' type="button" value="Generate initiation" />
+</div>
+
+<div class='col-md-4'>
+ <input class='btn btn-info' type="button" value="Generate normal reg" />
+</div>
+
+</div>
+
+<br />
+<br />
+<br />
 
 <table id="myTable">
 <thead>
@@ -11,6 +37,7 @@
   <th>Family name</th>
   <th>Gender</th>
   <th>DOB</th>
+  <th>&nbsp;</th>
 </tr>
 </thead>
 <tbody>
@@ -21,6 +48,7 @@
   <td><%=patient['family_name']%></td>
   <td><%=patient['gender']%></td>
   <td><%=patient['birthdate']%></td>
+  <td><input type='checkbox' id="patient_<%=patient['patient_id']%>" onchange="assigned(this.id)" /></td>
  </tr>
 <%end%>
 </tbody>
@@ -40,4 +68,8 @@ $(document).ready(function(){
       $('#myTable').DataTable();
 });
 
+var assigned_ids = [];
+
+function assigned(e) {
+}
 </script>
