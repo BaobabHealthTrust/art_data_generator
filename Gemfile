@@ -11,7 +11,7 @@ gem 'devise'
 # Gem to generate fake data
 gem 'faker', '~> 1.6', '>= 1.6.3'
 # Use bootstrap4 as FrontEnd Framework
-# gem 'bootstrap', '~> 4.0.0.alpha5'
+#gem 'bootstrap', '~> 4.0.0.alpha5'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets

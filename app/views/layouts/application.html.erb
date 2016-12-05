@@ -85,7 +85,12 @@
 
     <!-- Page Content -->
     <div class="container">
-
+        <!-- jQuery -->
+        <!--script src="js/jquery.js"></script-->
+        <%= javascript_include_tag 'bootstrap/jquery' %>
+        <!-- Bootstrap Core JavaScript -->
+        <!--script src="js/bootstrap.min.js"></script-->
+        <%= javascript_include_tag 'bootstrap/bootstrap.min' %>
         <%= yield %>
 
         <hr>
@@ -102,13 +107,6 @@
     </div>
 
     <!-- /.container -->
-
-    <!-- jQuery -->
-    <!--script src="js/jquery.js"></script-->
-    <%= javascript_include_tag 'bootstrap/jquery' %>
-    <!-- Bootstrap Core JavaScript -->
-    <!--script src="js/bootstrap.min.js"></script-->
-    <%= javascript_include_tag 'bootstrap/bootstrap.min' %>
 
 </body>
 
