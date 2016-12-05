@@ -7,27 +7,19 @@
  text-align: right;
 }
 
+.btn-divs {
+  margin-bottom: 12px;
+}
+
+.btn-divs .btn {
+  width: 200px;
+}
+
 </style>
 
 <div id='controls' class='row'>
 
-<div class='col-md-4'>
- <input class='btn btn-info' type="button" value="Generate transfer ins" />
-</div>
-
-<div class='col-md-4'>
- <input class='btn btn-info' type="button" value="Generate initiation" />
-</div>
-
-<div class='col-md-4'>
- <input class='btn btn-info' type="button" value="Generate normal reg" />
-</div>
-
-</div>
-
-<br />
-<br />
-<br />
+<div class='col-md-10'>
 
 <table id="myTable">
 <thead>
@@ -54,9 +46,25 @@
 </tbody>
 </table>
 
+</div>
+<div class='col-md-2'>
+
+  <div class='row btn-divs'>
+   <input class='btn btn-info' type="button" value="Generate transfer ins" />
+  </div>
+
+  <div class='row btn-divs'>
+   <input class='btn btn-info' type="button" value="Generate initiation" />
+  </div>
+
+  <div class='row btn-divs'>
+   <input class='btn btn-info' type="button" value="Generate normal reg" />
+  </div>
+
+</div>
 
 
-
+</div>
 
 
 
