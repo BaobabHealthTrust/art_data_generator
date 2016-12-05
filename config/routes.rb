@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   get '/new_visits', to: 'generator#visits'
 
+  get '/list_of_patients_without_any_encounters', to: 'generator#patients'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'home#index'
 end
